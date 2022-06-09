@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*
+    quando coloca no html [ id="nome" ] para personalizar ele aqui no css é com #nome (exemplo o h1 que chamei de principe) -- só pode usar o mesmo nome em um
+    se quiser mais de um usa-se class
+    em html class = em css .
+*/
+
+body {
+    background-color: #E799FF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: #73992E;
+}
+
+h2 {
+    color: #BDE673;
+}
+
+h1#principe {
+    text-align: center;
+    background-color: #BDE673;
+    font-weight: bold;
+    font-size: 2.5em; /* 16px = 1em */
+}
+
+.basico {
+    background-color: #b2adb478;
+}
+
+.intermed {
+    background-color: #c9b0d1;
+}
+
+/* então dá pra criar uma classe só pra coisas "marcadas"*/
+.destaque {
+    background-color: yellow;
+}

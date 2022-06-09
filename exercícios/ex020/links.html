@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+        <!-- esssa tag style está personalizando os links com CSS-->
+        <style> 
+            a {
+                font-weight: bold;
+                text-decoration: none;
+                color: rgb(0, 102, 255);
+            }
+            a:visited{
+                color: rgb(190, 10, 10);
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            a:active{
+                color: yellow;
+            }
+            a::after{
+                content: ' <--- [link]';
+                text-decoration: none;
+                font-weight: normal;
+                color: gray;
+            }
+            a::before{
+                content: '---> ';
+            }
+            .especial{
+                background-color: rgb(255, 80, 246);
+            }
+            .especial::after{
+                background-color: rgb(255, 0, 242);
+            }
+        </style>
+</head>
+<body>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/">youtube</a></p></li>
+        <li><a href="https://GOOGLE.COM/" target="_blank" rel="external" class="especial">gluglu</a></li>
+    </ul>   
+    <p>os :: indicam as pseudo-classes</p> 
+    <p>que nesse caso está sendo utilizada para colocar "coisas" antes ou depois de cada link:</p>
+    <pre>
+        <code>
+            a::after{
+                content: '[link]';
+                text-decoration: none;
+                font-weight: normal;
+                color: gray;
+            }
+        </code>
+    </pre>
+    <p>se você quiser que um link apareça diferente, colcoa uma classe nele, como eu coloquei "especial" e dá um tratamento diferenciado a ela</p>
+    <h1>simbolos importantes</h1>
+    <h2>seletores personalizados</h2>
+    <pre>
+        <code>
+        #  = id
+        .  = class
+        :  = pseudo-class
+        :: = pseudo-elements
+        >  = children
+        </code>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aliceblue;
+        }
+        header{
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(199, 199, 199) ;
+            padding: 2px;
+        }
+        nav > a{ /*links dentro do nav*/
+            text-decoration:  none;
+            color: gray;
+            font-weight: bold;
+        }
+        nav > a:hover { /*quando passar o mouse em cima dos links*/
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        article{
+            background-color: aqua;
+            padding: 3px;
+        }
+        article > aside{
+            background-color: aquamarine;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- já vimos div e spam, uma caixa box-level e outra inline-level-->
+    <!-- antes era tudo feito com div dentro de div, mas no html5 tem a tal da semântica, e o mecanismo de busca do navegador consegue valorizar mais as divs, então elas ganharam outros nomes: header, main, footer...-->
+    <header>
+        <h1>MEU SITE</h1>
+        <nav> <!-- para colocar os links-->
+            <a href="#">link 1</a>
+            <a href="#">link 2</a>
+            <a href="#">link 3</a>
+            <a href="#">link 4</a>
+            <a href="#">link 5</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>tecnologia esporte política</p>
+        </section>
+        <section id="notícias">
+            <article>
+                <h2>noticias do brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum rerum, sapiente tenetur nobis aut consequuntur architecto reiciendis ab hic aliquam, dolore doloremque ipsam nostrum error sequi illum veritatis inventore? Ullam?</p>
+                <aside> <!--periférico-->
+                    <p>artigo escrito por brownie</p>
+                </aside>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <p>desenvolvido por chasmalin</p>
+    </footer>
+</body>
+</html>

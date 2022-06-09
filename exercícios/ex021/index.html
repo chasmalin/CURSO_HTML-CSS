@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modelo de caixas</title>
+    <style>
+        h1{
+            background-color: antiquewhite;
+            height: 300px;
+            width: 500px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: blueviolet;
+
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 8px;
+            padding-left: 3px;
+
+            margin:auto;
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: green;
+        }
+        a{ /*dá pra mudar a característica do elemento com o "display", por exemplo "display:block;" vai alterar o link que é inline-level para box-level*/
+            /*display: block;*/
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- o padding é dividido em 4 partes e tem que ser escrito na ordem: começa de cima e "gira" em sentido horário-->
+    <p>quando usa isso é chamado "aninhamento"</p> <!--isso o que?-->
+    <h1>exemplo de caixa box-level</h1>
+    <p>parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. vamos ver como tudo isso funciona.</p>
+    <p>para inspecionar: Ctrl+Shift+i, ou então vai em "ferramentas do desenvolvedor", lá mostra um treco legal</p>
+    <!-- "a ferramenta dev tools do google chrome ajuda muito na hora de desenvolver", guanabara, 2022. kkk-->
+    <p>o outline fica por fora da borda e o limite dele é a margem</p>
+    <p>as linhas: border-width: 10px; border-style: solid; e border-color: blueviolet;, podem ser simplificada por border: 10px solid blueviolet; nessa ordem.</p>
+    <p>o padding também</p>
+</body>
+</html>

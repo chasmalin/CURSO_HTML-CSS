@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/*
+    quando coloca no html [ id="nome" ] para personalizar ele aqui no css é com #nome (exemplo o h1 que chamei de principe) -- só pode usar o mesmo nome em um
+    se quiser mais de um usa-se class
+    em html class = em css .
+*/
+
+body {
+    background-color: #6cfff8;
+    font-family: 'Courier New', Courier, monospace;
+}

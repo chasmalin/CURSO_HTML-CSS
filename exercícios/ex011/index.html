@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>mídias</title>
+</head>
+<body>
+    <h1>imagens dinâmicas</h1>
+    <p>abra esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <h1>reproduzindo áudio</h1>
+    <p>dando um play em HTML5 kkkkk</p>
+    <audio src="midia/busycity.mp3" controls></audio>
+    <h1>EX012!!!</h1>
+    <h2>agora é pra adicionar vídeos! XD</h2>
+    <p>esse vídeo está hospedado no meu próprio servidor:</p>
+    <!-- dá pra fazer assim:
+    <video src="midia/video-teste.mp4" width="500" controls></video>
+    mas fica super estranho, então faz igual o de picture
+    -->
+    <video width="500" poster="midia/thumb.png" controls> <!--dá pra colocar também os parâmetros autoplay e loop-->
+        <source src="midia/video-teste.mp4" type="video/mp4">
+        <!--se não der pra abrir o vídeo, aparece a seguinte mensagem:-->
+        <p>seu navegador não tem compatibildiade com reprodução de vídeos. )=</p>
+    </video>
+    <h3>vamos colocar vídeo de algum outro lugar pra ficar mais "leve"</h3>
+    <p>do youtube nesse caso:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>clica em "compartilhar", daí em "encorporar" e já vem o código pronto.</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>hyperlink</title>
+    <!-- esssa tag style está personalizando os links com CSS-->
+    <style> 
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(0, 102, 255);
+        }
+        a:visited{
+            color: rgb(190, 10, 10);
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>usando links externos</h1>
+    <p>repositório público no <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">github</a> do guanabara e também tem o canal do <a href="https://youtube.com/cursoemvideo/">youtube</a></p>
+    <p>obs.: <code>target="_blank"</code> faz com que abra em outra janela (no caso outra aba)</p>
+    <p>e o <code>rel="external"</code> quer dizer que é um link do tipo externo.</p>
+    <h2>usando links internos</h2>
+    <p>a segunda página do site pode ser acessada por <a href="pag002.html" rel="next">aqui</a></p>
+    <p>você pode também acessar a terceira página do meu site clicando <a href="noticias/pag003.html">aqui</a></p>
+    <hr> <!--horizontal row-->
+    <h2>links para download</h2>
+    <ul>
+        <li><a href="downloads/resumo.pdf">baixar arquivo PDF</a></li>
+        <li><a href="downloads/resumo.zip" download="resumo.zip" type="application/zip">baixar arquivo zipado</a></li>
+    </ul>
+</body>
+</html> 
