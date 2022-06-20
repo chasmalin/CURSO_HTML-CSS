@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh; /*100% da view port (janela do navegador)*/
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center top;
+            background-repeat: no-repeat;
+            /*background-size: 100% 100%; /*isso faz com que a imagem preencha toda a tela do navegador, mas ela vai ficar distorcida*/
+            /*background-size: contain; /*essa configuração faz com que a imagem seja totalmente exibida, é bom, mas não resolve nesse caso*/
+            background-size: cover; /*esse resolve! porque ele vai cortar as bordas, a imagem vai preencher todo o espaço e não vai deformar a imagem*/
+        }
+        main{
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto; /*lembrando que essa linha de código que alinha tudo centralizado*/
+            border: 2px solid blue;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem inventore culpa provident aperiam asperiores repudiandae ut blanditiis qui, ad laborum facere quasi at pariatur! Voluptatibus tenetur et sit tempora quaerat! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, magnam? Magni voluptatibus perspiciatis assumenda ad neque! Cum repudiandae facere laudantium consequatur exercitationem sequi quae. Molestias eos inventore quam provident ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem repellat, itaque repudiandae quidem asperiores unde quia repellendus enim consectetur distinctio! Ut in vel rerum quia cupiditate tenetur officiis quaerat corporis.</p>
+    </main>
+</body>
+</html>
