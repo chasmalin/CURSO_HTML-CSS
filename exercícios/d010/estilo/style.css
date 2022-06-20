@@ -79,7 +79,8 @@ header > p{
     max-width: 600px;
     margin: auto;
     /*só pra dar um espacinho entre esse "subtítulo" e a barra de navegação abaixo*/
-    /*margin-bottom: 20px; /*não funcionou uai*/
+    /*margin-bottom: 20px; /*não funcionou uai -> não funcionou porque tinha que ser padding, o guanabara explicou no vídeo*/
+    padding-bottom: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.606);
 }
 
