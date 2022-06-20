@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- CAPÍTULO 19 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de imagem de fundo</title>
+    <style>/*lemabrando que dá pra criar um arquivo css separado, mas como vamos ter vários .html e não só um projeto, compensa colocar aqui dentro da head mesmo*/
+    /* -- 3 MANEIRAS DE CONFIGURAR O FUNDO -- */
+        body{
+            /*dá pra configurar o fundo também!*/
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+        div.quadrado{ /*definindo o padrão das divs configurando por classes*/
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block; /*coloca uma do lado da outra*/
+            border-radius: 10px; /*frescurinha pra ficar bonitinho*/
+            background-color: lightgray;
+        }
+        /*definindo as diferenças individuais das divs*/
+        div#q1{ 
+            background-color: aliceblue;
+        }
+        div#q2{
+            background-image: linear-gradient(to bottom, yellow, orange);
+        }
+        div#q3{
+            background-image: url('imagens/pattern001.png');
+        }
+    </style>
+</head>
+<body> <!-- criando divs com classe "quadrado" para fazer testes com imagens de fundo-->
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
+</body>
+</html>
