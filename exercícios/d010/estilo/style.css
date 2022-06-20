@@ -64,7 +64,7 @@ header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     /*colocando uma margem superior no título pra ele não ficar tão colado no topo, para isso funcionar, tem que ter um padding maior no cabeçalho*/
-    font-size: 3em;
+    font-size: 3em; /*1em é o tamanho padrão da fonte, equivale à 16px e 12pt (word)*/
     margin-top: 20px;
     margin-bottom: 10px;
     /*colocando uma sombrinha do texto pra ficar show*/
