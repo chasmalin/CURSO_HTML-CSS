@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alinhamento vertical</title>
+    <style>
+        section#container{ /*dá pra colocar só "#container" invés de "section#container" (porque o id é único eu acho)*/
+            height: 95vh; /*% da view port (janela do navegador)*/
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: relative; /*isso é padrão mas por algum motivo tem que colocar aqui*/
+            
+            padding: 10px;
+            background-color: purple;
+        }
+        article#conteudo{
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: absolute; /*daí alterando esse aqui vai ter algum efeito*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /*margin: auto; /*essa é a maneira mais fácil que aprendemos de alinhar no centro alguma coisa, mas só serve para alinhamento horizontal =(*/
+            /*as seguintes alterações só funcionam quando a posição está configurada para absoluta*/
+            left: 50%;/*50px;*/
+            top: 50%;/*200px;*/
+            /*com top e left dá pra colocar a distância tanto em px como em %
+            para verificar o efeito disso, colocar a imagem de fundo do alvo (target001)[e o background-size também] no container, depois no conteudo,
+            daí com o top left em 50%, ele pega como referência o centro do target, não é maneiro?*/
+            /*agora pra colocar o centro do target amarelo junto com o centro do target roxo, ou seja, centralizado de verdade, precisa fazer uma "transformação"*/
+            transform: translate(-50%, -50%);
+            /*dá pra manipular com px (ou em %) tanto negativo (mexe pra cima e pra esquerda) quanto positivo (mexe pra baixo e pra direita)
+            agora tá centralizado!!!*/
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+            <p>k</p>
+        </article>
+    </section>
+</body>
+</html>
