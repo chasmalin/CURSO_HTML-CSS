@@ -4,15 +4,32 @@
     2- em seguida, fazer a configuração de todos os elementos com *
     3- agora vamos configurar tudo que a tag html e body têm  em comum
 */
- 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Sriracha&display=swap');
+/*
+    ^^^ importando as fontes do google fonts
+    font-family: 'Passion One', cursive;
+    font-family: 'Sriracha', cursive;
+*/ 
+/*criando esse root pra criar variáveis*/
+:root {
+    /*dando nomes para as fontes*/
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+    /*para conseguir os nomes certinhos das fontes, vai em outro {} e digite font-family que ele dá as sugestões certinho*/
+}
+
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 html, body {
     min-height: 100vh; /*esse é o tamanho mínimo que o corpo do site vai ter, pode ser em % também*/
     background-color: darkgray;
+    /*adicionando a fonte padrão:*/
+    font-family: var(--fonte1);
 }
 
 header {
@@ -25,6 +42,10 @@ header > h1 { /*todo h1 dentro de header*/
     padding-top: 50px;
     /*text-transform: uppercase; /*modificador de texto, "uppercase" deixa tudo maiúsculo*/
     font-variant: small-caps; /*essa também deixa tudo maiúsculo, mas bonitinho do jeito que eu gosto *-* */
+    /*adicionando a fonte de título do cabeçalho:*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*tamanho da letra ajustado para 10% da largura da tela (viewport width)
+    isso faz com que, quanto mais larga a tela, maior a letra, mas não é a melhor maneira*/
 }
 
 header > p {
@@ -49,6 +70,9 @@ section { /*configuração tanto pra normal quanto para a imagem*/
     /*esses paddings com configurações de vh é para ficar bom com o efeito paralax*/
     line-height: 2em; /*dando um espaçamento duplo em cada linha*/
     padding-left: 30px; /*dando um "parágrafo"*/
+    /*adicionando a fonte padrão do section:*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
 section.normal {
@@ -58,12 +82,17 @@ section.normal {
 
 section.imagem {
     background-color: rgb(108, 108, 108);
-    color: white;
+    color: white;    
 }
 
 section.imagem > p { /*todo parágrafo que estiver dentro do section de classe imagem vai ter:*/
     background-color: rgba(0, 0, 0, 0.25); /*a transparência faz sentido quando colocar a imagem*/
-    width: 400px;
+    /*width: 400px;
+    /*ajustar a largura na section de imagem, tirando os 400px pra começar,
+    depois vamos colocar essa caixa para se adaptar ao tamanho do conteúdo:*/
+    display: inline-block;
+    /*depois coloca uns 5px de padding só pra não ficar tão colado nos cantos*/
+    padding: 5px;
 }
 
 footer {
