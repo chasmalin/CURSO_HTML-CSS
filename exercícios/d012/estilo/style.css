@@ -75,6 +75,10 @@ section { /*configuração tanto pra normal quanto para a imagem*/
     font-size: 3.5vw;
 }
 
+section > p {
+    padding-bottom: 1em;
+}
+
 section.normal {
     background-color:  white;
     color: black;
@@ -82,17 +86,39 @@ section.normal {
 
 section.imagem {
     background-color: rgb(108, 108, 108);
-    color: white;    
+    color: white;
+    /*colocando uma sombra pro lado de dentro*/
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.507); /*tamanho tamanho espalhamento ampliação cor*/
+    background-size: cover; /* dá pra colocar essa configuração aqui ao invés de colocar em cada imagem por id, já que são iguais*/
+    background-attachment: fixed; /*isso é o efeito parallax? uau?*/
 }
 
 section.imagem > p { /*todo parágrafo que estiver dentro do section de classe imagem vai ter:*/
-    background-color: rgba(0, 0, 0, 0.25); /*a transparência faz sentido quando colocar a imagem*/
+    background-color: rgba(0, 0, 0, 0.5); /*a transparência faz sentido quando colocar a imagem*/
     /*width: 400px;
     /*ajustar a largura na section de imagem, tirando os 400px pra começar,
     depois vamos colocar essa caixa para se adaptar ao tamanho do conteúdo:*/
     display: inline-block;
     /*depois coloca uns 5px de padding só pra não ficar tão colado nos cantos*/
     padding: 5px;
+    /*agora colocar sombra no texto pra ficar mais legígem por conta da transparência e da imagem de fundo
+    tamanho tamanho espalhamento cor*/
+    text-shadow: 1px 1px 0px black;
+}
+
+/*
+    depois de quase tudo feito, agora falta colocar as configurações para as classes ded imagens, mas que têm ids diferentes (porque id é único)
+*/
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    /*background-size: cover; /*cobrir todo o espaço, coloquei essa config na section.imagem*/
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+    /*background-size: cover;*/
 }
 
 footer {
@@ -101,3 +127,4 @@ footer {
     text-align: center;
     padding: 10px;
 }
+/*guanabara comentou no final que dá pra melhorar esse projeto com "media query"*/
