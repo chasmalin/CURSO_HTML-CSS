@@ -1,5 +1,74 @@
 @charset "UTF-8";
 /*
-    a primeira coisa que se cria em um documento CSS, é sempre o @charset "UTF-8";
+    1- a primeira coisa que se cria em um documento CSS, é sempre o @charset "UTF-8";
+    2- em seguida, fazer a configuração de todos os elementos com *
+    3- agora vamos configurar tudo que a tag html e body têm  em comum
 */
  
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*esse é o tamanho mínimo que o corpo do site vai ter, pode ser em % também*/
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white; /*lembrando sempre que essa é a cor da letra*/
+    text-align: center;
+}
+
+header > h1 { /*todo h1 dentro de header*/
+    padding-top: 50px;
+    /*text-transform: uppercase; /*modificador de texto, "uppercase" deixa tudo maiúsculo*/
+    font-variant: small-caps; /*essa também deixa tudo maiúsculo, mas bonitinho do jeito que eu gosto *-* */
+}
+
+header > p {
+    padding-bottom: 50px; /*para combinar com o padding do h1, ficar 50 em cima e em baixo*/
+}
+
+header a, footer a { /* se colocar só "a", todos os links do site serão iguais*/
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;    
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+/*main*/
+
+section { /*configuração tanto pra normal quanto para a imagem*/
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    /*esses paddings com configurações de vh é para ficar bom com o efeito paralax*/
+    line-height: 2em; /*dando um espaçamento duplo em cada linha*/
+    padding-left: 30px; /*dando um "parágrafo"*/
+}
+
+section.normal {
+    background-color:  white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(108, 108, 108);
+    color: white;
+}
+
+section.imagem > p { /*todo parágrafo que estiver dentro do section de classe imagem vai ter:*/
+    background-color: rgba(0, 0, 0, 0.25); /*a transparência faz sentido quando colocar a imagem*/
+    width: 400px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
