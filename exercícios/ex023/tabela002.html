@@ -13,6 +13,12 @@
             width: 500px;
             border-collapse: collapse;
         }
+        caption{ /*configurando a legenda da tabela*/
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(239, 239, 239);
+        }
         td, th{ /*se quiser fazer a mesma configuração pro conteúdo do cabeçalho é só colocar "td, th" */
             border: 1px solid black;
             padding: 10px;
@@ -31,6 +37,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (legenda da tabela)
             THEAD
                 TR (linha), TD (dado), TH (cabeçalho)
             TBODY
@@ -39,10 +46,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th><!-- scope="col" diferencia as colunas? diz que ele é o escopo de uma coluna-->
+                <th scope="col" style="width: 50px;">População</th><!--uma configuração pontual de estilo para deixar a largura da coluna menor-->
             </tr>
         </thead>
         <tbody>
@@ -89,10 +97,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>total de habitantes</th>
+                <!--essa linha já não é escopo de uma coluna e sim de uma linha-->
+                <th scope="row">Total de Habitantes</th>
                 <td><strong>0000000000</strong></td>
             </tr>
         </tfoot>
     </table>
+    <!--a tabela com semântica facilita ao google reconhecer o seu site, para que ele fique coerente quando alguém está buscando ele-->
 </body>
 </html>
