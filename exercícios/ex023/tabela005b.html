@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;
+            width: 500px;
+        }
+        caption{
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        col.cnome{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>mesclagem de células</h1>
+    <h2>exercício</h2>
+    <table>
+        <!--a partir do HTML5 foi criado um jeito pra conseguir destacar uma coluna inteira, pra não precisar ficar configurando item por item (numa tabela de 500 registros isso seria muito demorado), então tem a tag colgroup-->
+        <colgroup> <!--é possível dar nome a cada coluna para poder configurar em css-->
+            <col class="cnome">
+            <col class="csexo">
+            <col class="ccidade">
+            <col class="cprof">
+            <!--dá pra colocar espansão aqui também: <col class="cgrupo" span="2">
+            só lembrar de colocar no lugar certo-->
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>    
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Claudia</td>    
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Nega</td>    
+            <td>F</td>
+            <td>22</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Julia</td>    
+            <td>F</td>
+            <td>28</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Mia</td>    
+            <td>F</td>
+            <td>24</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Janna</td>    
+            <td>F</td>
+            <td>26</td>
+            <td>Jornalista</td>
+        </tr>
+    </table>
+</body>
+</html>
