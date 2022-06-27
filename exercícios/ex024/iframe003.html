@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela{
+            width: 92vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta expedita natus officiis accusamus ut, ex repellat excepturi saepe impedit adipisci, iusto veritatis eaque architecto similique non commodi maxime quae! Suscipit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ipsa consequuntur aliquam alias, quisquam cum blanditiis nisi animi reprehenderit quas doloribus iusto ab recusandae optio ad molestiae ea dolore corporis? </p>
+
+    <!--
+        configuração para carregar um link dentro do iframe
+        é necessário dar um nome para o iframe, passar esse nome pelo target (ao invés de _blank pra abrir na outra página), daí ele vai abrir no frame
+    -->
+    <ul>
+        <li><a href="pag001.html" target="quadro">Primeira página</a></li>
+        <li><a href="pag002.html" target="quadro">Segunda página</a></li>
+        <li><a href="pag003.html" target="quadro">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta expedita natus officiis accusamus ut, ex repellat excepturi saepe impedit adipisci, iusto veritatis eaque architecto similique non commodi maxime quae! Suscipit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ipsa consequuntur aliquam alias, quisquam cum blanditiis nisi animi reprehenderit quas doloribus iusto ab recusandae optio ad molestiae ea dolore corporis? </p>
+    <!--o src vazio faz ela aparecer vazia no início-->
+    <iframe src="" frameborder="1" id="tela" name="quadro">
+        <p>Infelizmente o teu navegador não é compatível com isso</p>
+    </iframe>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta expedita natus officiis accusamus ut, ex repellat excepturi saepe impedit adipisci, iusto veritatis eaque architecto similique non commodi maxime quae! Suscipit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ipsa consequuntur aliquam alias, quisquam cum blanditiis nisi animi reprehenderit quas doloribus iusto ab recusandae optio ad molestiae ea dolore corporis? </p>
+</body>
+</html>
