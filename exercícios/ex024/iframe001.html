@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos de iframe</title>
+    <style>
+        iframe{
+            /*as configurações que estiverem aqui dentro prevalescerão sobre as que forem feitas pontualmente*/
+            width: 500px;
+            border: 1px dashed black; /*o dashed tá no lugar de solid*/
+        }
+    </style>
 </head>
 <body>
     <h1>testando o uso de iframe</h1>
+    <!--o tamanho padrão do iframe é 300x150px, vou tentar editar lá em baixo-->
     <p>acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">curso em  vídeo</a> para aprender a programar</p>
     <p>daí ao invés do link ali normal, vamos criar um iframe. copiando o mesmo parágrafo:</p>
     <!--...-->
@@ -24,9 +32,59 @@
     <p>
         o site do 
         <iframe src="https://www.google.com" frameborder="0"></iframe>
-        também é muito legal
+        também é muito legal, pena que não funciona dentro do iframs
     </p>
     <p>curiosamente não deu certo com o site do google, por que?<br>porque parece que alguns sites têm proteção para o uso do seu conteúdo dentro de iframes</p>
+    <!--...-->
+    <p>
+        o repositório do github do gustavo guanabara
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0">
+            <!--
+                tudo o que estiver escrito aqui no meio, entre a abertura e o fechamento da tag <iframe> vai aparecer somente se o seu navegador não tiver compatibilidade, então é legal colocar uma mensagem do tipo:
+            -->
+            [ seu navegador não é compatível com isso, desculpe ]
+             <!--
+                ou melhor ainda!
+                coloca o link pro site, hehe
+             -->
+        </iframe>
+        também é legal
+    </p>
+
+    <p>
+        veja a minha página do github: 
+        <iframe src="https://github.com/chasmalin/" frameborder="0">
+            <a href="https://github.com/chasmalin/">https://github.com/chasmalin/</a>
+        </iframe>
+        é um máximo ela (vixi, não deixa mostrar ela também, que triste)
+    </p>
+    <!--...-->
+    <p>
+        alterando a altura do iframe<br>
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500">
+            <a href="https://www.cursoemvideo.com">CursoemVideo</a>
+        </iframe>
+        <br>
+        legal que fica parecendo a tela de um celular, daí dá até pra fazer os testes de responsividade dentro dele, olha que massa (eu acho?)
+    </p>
+    <!--...-->
+    <p>
+        agora alterando a largura do iframe<br>
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" width="500">
+            <a href="https://www.cursoemvideo.com">CursoemVideo</a>
+        </iframe>
+    </p>
+    <!--...-->
+    <p>
+        dá pra configurar os iframes com CSS também, e se estiver uma configuração na CSS e outra pontual no próprio iframe, a CSS que vai prevalescer 
+    </p>
+    <!--...-->
+    <p>existe também o parâmetro scrolling para tirar (ou não) a barra de rolagem, com as opções auto, yes e no, por exemplo:</p>
+    <p>
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" scrolling="no">
+            <a href="https://www.cursoemvideo.com">CursoemVideo</a>
+        </iframe>
+    </p>
     <!--...-->
 </body>
 </html>
