@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+<!--
+    agora vamos criar um código que carregue o formulário que criamos no pag004
+-->
+<body>
+    <h1>site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at recusandae quo asperiores perspiciatis architecto veritatis quasi animi accusantium? Accusamus nesciunt iste est hic natus possimus quas, iusto vitae quibusdam.</p>
+
+    <!--massa! assim o cadastro fica aparecendo dentro do iframe-->
+    <iframe src="pag004.html" frameborder="1">
+        seu navegador não é compatível com isso...
+    </iframe>
+    <!-- e para bloquear todas as ações que são potencialmente maliciosas, dos sites que você coloca dentro do seu ifrme, é "simples" kkk-->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea facere quo ex distinctio eos accusamus ad laboriosam nesciunt impedit neque. Iusto placeat neque tempore, tenetur nobis doloremque commodi repellendus. Recusandae.</p>
+
+    <!--
+        criando outro iframe para mostrar a diferença
+        para proteger, tem que colocar a configuração "sandbox" em que a configuração básica é sandbox, isso bloqueia todo e qualquer acesso que outros sites que estejam dentro do iframe tentem fazer, como por exemplo cadastro de pessoas
+    -->
+    <iframe src="pag004.html" sandbox="sandbox" referrerpolicy="no-referrer"> <!-- lê-se: "atributo sandbox com valor sandbox"-->
+        seu navegador não é compatível com isso...
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis, voluptatem nihil maiores fugit a nesciunt consequatur omnis ullam voluptas qui temporibus. Officiis iure iusto quae quaerat, aliquam vero nisi!</p>
+    <!--
+        uma outra maneira de deixar o site um pouco mais seguro é configurar o parâmetro referrerpolicy (política de referência), em que seu valor padrão é: "no-referrer-when-downgrade".
+    então se quisermos tornar mais limitado o que está carregado dentro do iframe tem que colocar o valor: "no-referrer" - que significa que o que está dentro do iframe não vai coletar nenhum tipo de informação do usuário
+    (mais detalhado no material)
+    -->
+</body>
+</html> 
