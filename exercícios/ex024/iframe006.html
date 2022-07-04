@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando conteúdos</title>
+</head>
+<body>
+    <h1>Conteúdos dentro de iframes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat delectus facilis quas ullam esse quibusdam, quidem asperiores quod quis molestiae commodi, harum officiis voluptates iure beatae explicabo reiciendis incidunt?</p>
+    <h2>vídeos</h2>
+    <p>vamos pegar um vídeo do vimeo hoje:</p>
+    <!--escolhe lá um vídeo e clica em compartilhar (tá aparecendo o aviãozinho do telegram)
+    ele já mostra o código do iframe, mas tem um botão com "+Mais Opções", que dá pra configurar o iframe de forma visual [ele já tem uma opção pra incorporar o vídeo de forma responsiva]
+    -->
+    <!--o link do vimeo começa aqui-->
+    <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/265045525?h=217b87fac0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    
+    <p><a href="https://vimeo.com/265045525">Looking For Something</a> from <a href="https://vimeo.com/cesarpelizer">C&eacute;sar Pelizer</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    <!--o link do vimeo termina aqui-->
+
+    <h2>mapas do google 0_o</h2>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.360760299773!2d-54.62272007042675!3d-20.491432217445478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e5fb7d77d59f%3A0xe0f737ab0eecacc4!2sR.%20%C3%81guiar%20Pereira%20de%20Souza%2C%20591%20-%20Jardim%20Am%C3%A9rica%2C%20Campo%20Grande%20-%20MS%2C%2079080-375!5e0!3m2!1spt-BR!2sbr!4v1656964662932!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h2>mapas do waze</h2>
+    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-20.491437&lon=-54.618235&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+
+    <!--dá pra colocar também slides do google docs, dica no vídeo 9, 7min-->
+</body>
+</html>
