@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        agora vamos criar esse novo arquivo pra carregar o outro que criamos o script do "clicou()" pag005.html
+    -->
+
+    <h1>TESTE</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maxime in officia, excepturi autem velit. Velit rerum atque delectus, assumenda, accusantium ratione dolor, nesciunt eveniet iure quia totam voluptas consectetur.</p>
+
+    <!--as vezes não é muito indicado deixar permitido a execução de scripts dentro do iframe (porque o script pode ser malicioso), então vamos fazer os testes...
+    neste primeiro iframe vamos deixar rodas script, no segundo não-->
+    <iframe src="pag005.html" frameborder="1"></iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eos dolor dignissimos deserunt reprehenderit, maxime et eum ipsum quis cumque aperiam porro possimus esse. Eaque rem molestias error reiciendis recusandae.</p>
+
+    <iframe src="pag005.html" frameborder="1" referrerpolicy="no-referrer" sandbox="sandbox"></iframe>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab tenetur eaque alias culpa doloremque enim omnis facere corporis provident. Assumenda id commodi veniam illo possimus cupiditate maxime deleniti ipsa perferendis?</p>
+    <!--agora neste último script, será bloqueado "todas as outras coisas", exceto os scripts-->
+    <iframe src="pag005.html" frameborder="1" referrerpolicy="no-referrer" sandbox="allow-scripts"></iframe>
+    <!--lembrando que o "no-referrer" quer dizer que dentro desse iframe não será permitido capturar dados de ninguém-->
+</body>
+</html>

@@ -31,8 +31,16 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facilis, voluptatem nihil maiores fugit a nesciunt consequatur omnis ullam voluptas qui temporibus. Officiis iure iusto quae quaerat, aliquam vero nisi!</p>
     <!--
         uma outra maneira de deixar o site um pouco mais seguro é configurar o parâmetro referrerpolicy (política de referência), em que seu valor padrão é: "no-referrer-when-downgrade".
-    então se quisermos tornar mais limitado o que está carregado dentro do iframe tem que colocar o valor: "no-referrer" - que significa que o que está dentro do iframe não vai coletar nenhum tipo de informação do usuário
-    (mais detalhado no material)
+        então se quisermos tornar mais limitado o que está carregado dentro do iframe tem que colocar o valor: "no-referrer" - que significa que o que está dentro do iframe não vai coletar nenhum tipo de informação do usuário
+        (mais detalhado no material)
+
+        você pode colocar diferentes configurações dentro do sandbox, só verificar direitinho o que cada uma delas significa
+
+        ("HTML5 executa scripts também, quando executa formulários" > prof disse isso, pesquisar)
     -->
+    <iframe src="pag004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        seu navegador não é compatível com isso...
+    </iframe>
+    <!--no caso deste último iframe, ele tá permitindo "coisas da mesma origem", " de formulários" e "scripts". todas as outras configurações continuam ligadas na segurança-->
 </body>
 </html> 
