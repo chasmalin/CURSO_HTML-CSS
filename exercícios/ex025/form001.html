@@ -13,9 +13,20 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+    <form action="cadastro.php" autocomplete="off"> 
+    <!--
+        o autocomplete off é pra ele não mostrar os dados gravados, muito bom.
+        já o action manda o form pra "algum lugar", nesse caso pra um script em php
+        agora vamos fazer a ligação do "Nome:" para a caixa de texto (etiqueta)
+        para o formulário funcionar direito, é necessário que todo objeto input tenha um nome 
+        a diferença entre name e id é que name é mais útil em php e html e o id é mais utilizado em JS
+        para colocar a etiqueta, envelope o "Nome:" e "Sobrenome:" com a tag label, e no for você coloca o id ["não se faz formulário sem relacionar o label ao seu input (seu elemento), senão você dificulta os mecanismos de busca e o navegator pra saber qual caixa está relacionada com qual label"]
+        obs.: se você não fizer essa relação, quando clica no nome não acontece nada. quando a relação tá feita, quanco clica no nome é a mesma coisa que se tivesse clicado dentro da caixinha
+    -->
+        <p><label for="idnome">Nome:</label> 
+            <input type="text" name="nome" id="idnome"></p>
+        <p><label for="idsobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="idsobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
