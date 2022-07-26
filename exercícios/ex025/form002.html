@@ -13,21 +13,23 @@
 </head>
 <body>
     <h1>TESTE DE FORMULÁRIO</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
         <p>
             <label for="iduser">Usuário: </label>
-            <input type="text" name="user" id="iduser">
+            <input type="text" name="user" id="iduser" required minlength="5" maxlength="15">
         </p>
+        <!--
+            required serve pra não enviar nada caso ersteja vazio [sempre dentro do input]
+            o min e max é pro tamanho no nome de usuário/senha
+        -->
         <p>
             <label for="idpass">Senha </label>
-            <input type="password" name="pass" id="idpass">
+            <input type="password" name="pass" id="idpass" required minlength="8">
         </p>
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
-        </p><!-- 7min do vídeo 20 
-                 sexta-feira e eu não fiz nada de web, parabéns Monara
-            -->
+        </p>
     </form>
 </body>
 </html>
