@@ -13,21 +13,27 @@
 </head>
 <body>
     <h1>TESTE DE FORMULÁRIO</h1>
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!--
+            o autocomplete é uma porcaria se não souber usar (aparece sugestão de nome em campo de email etc.)
+            então, para mantê-lo ligado e em harmonia é necessário dizer qual caixa vai ser autocompletada com o que
+            então para isso você tem que colocar "on" no form, depois no usuário, colocar autocomplete="username"
+        -->
         <p>
             <label for="iduser">Usuário: </label>
-            <input type="text" name="user" id="iduser" required minlength="5" maxlength="15">
+            <input type="text" name="user" id="iduser" required minlength="5" maxlength="15" size="11" placeholder="nome do usuário" autocomplete="username"> <!--placeholder é uma dica do que escrever no campo-->
         </p>
         <!--
             required serve pra não enviar nada caso ersteja vazio [sempre dentro do input]
             o min e max é pro tamanho no nome de usuário/senha
         -->
         <p>
-            <label for="idpass">Senha </label>
-            <input type="password" name="pass" id="idpass" required minlength="8">
+            <label for="idpass">Senha: </label>
+            <input type="password" name="pass" id="idpass" required minlength="8" maxlength="20" size="12" placeholder="+ de 8 caracteres" autocomplete="current-password">
+            <!--o autocomplete="new-password" mostra que você tá colocando uma senha nova e não pegando uma do BD [eu acho], para pegar a senha atual, coloca current-password-->
         </p>
         <p>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar"> <!--verificar porque esse botão não faz com que o arquivo em .php abra TT-->
             <input type="reset" value="Limpar">
         </p>
     </form>
